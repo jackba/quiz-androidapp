@@ -7,6 +7,11 @@ public class Question {
 	private boolean isActive;
 	private String url;
 	private ArrayList<Answer> answers;
+	
+	public Question() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Question(String text, boolean isActive, String url,
 			ArrayList<Answer> answers) {
 		this.text = text;

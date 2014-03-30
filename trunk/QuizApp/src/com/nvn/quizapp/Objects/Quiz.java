@@ -9,6 +9,10 @@ public class Quiz {
 	private boolean isActive;
 	ArrayList<Exam> exams;
 	
+	public Quiz() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Quiz(String name, String appIcon, String appImg, boolean isActive,
 			ArrayList<Exam> exams) {
 		this.name = name;

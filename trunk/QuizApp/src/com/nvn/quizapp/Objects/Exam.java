@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Exam {
 	private String title;
 	private String limitTime;
-	private float price;
+	private double price;
 	private boolean isActive;
 	private String imgUrl;
 	private String firstBadgeName;
@@ -20,7 +20,7 @@ public class Exam {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Exam(String title, String limitTime, float price, boolean isActive,
+	public Exam(String title, String limitTime, double price, boolean isActive,
 			String imgUrl, String firstBadgeName, String firstBadgeImg,
 			String secondBadgeName, String secondBadgeImg,
 			String thirdBadgeName, String thirdBadgeImg,
@@ -70,14 +70,14 @@ public class Exam {
 	/**
 	 * @return the price
 	 */
-	public float getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
 	/**
 	 * @param price the price to set
 	 */
-	public void setPrice(float price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 

@@ -5,6 +5,10 @@ public class Answer {
 	private boolean isCorrect;
 	private boolean isActive;
 	
+	public Answer() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Answer(String text, boolean isCorrect, boolean isActive) {
 		this.text = text;
 		this.isCorrect = isCorrect;
