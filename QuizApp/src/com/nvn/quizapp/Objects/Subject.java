@@ -6,6 +6,11 @@ public class Subject {
 	private String title;
 	private boolean isActive;
 	private ArrayList<Question> questions;
+	
+	public Subject() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Subject(String title, boolean isActive, ArrayList<Question> questions) {
 		this.title = title;
 		this.isActive = isActive;
