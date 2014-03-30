@@ -17,7 +17,8 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public void initViews() {
 		// TODO Auto-generated method stub
-		
+		// adfasdfsdfsdfsdfdf
+		// sdfsdfd
 	}
 
 	@Override
