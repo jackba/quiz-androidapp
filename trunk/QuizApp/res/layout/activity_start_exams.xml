@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3598db" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5px"
+            android:background="@drawable/pressed_back_action" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10px"
+            android:text="@string/exams"
+            android:textColor="#fff"
+            android:textSize="25px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_back"
+            android:padding="10px"
+            android:text="@string/back"
+            android:textColor="#fff"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_title_of_exame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5px"
+                android:text="Title of exame"
+                android:textColor="#3d97d5"
+                android:textSize="25px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_demo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5px"
+                android:text="Few lines or more, centered or not, 30 font"
+                android:textColor="#3d97d5"
+                android:textSize="20px"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Some little description of exam"
+                android:textColor="#3d97d5"
+                android:textSize="20px"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:background="#3d97d5" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="15px"
+                            android:layout_height="15px"
+                            android:background="@drawable/ic_clock" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3px"
+                            android:text="Time"
+                            android:textColor="#3d97d5" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25:55"
+                        android:textColor="#3d97d5"
+                        android:textSize="45px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="50px"
+                    android:layout_marginBottom="5px"
+                    android:layout_marginTop="5px"
+                    android:background="#3d97d5" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="15px"
+                            android:layout_height="15px"
+                            android:background="@drawable/ic_question" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3px"
+                            android:text="Question"
+                            android:textColor="#3d97d5" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textColor="#3d97d5"
+                        android:textSize="45px"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:background="#3d97d5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="To pass the exame you need give correct answer on"
+                android:textColor="#3d97d5" />
+
+            <SeekBar
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="75/100"
+                android:textColor="#3d97d5"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:background="#3d97d5" />
+
+            <Button
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15px"
+                android:background="@drawable/pressed_signup_action"
+                android:paddingBottom="5px"
+                android:paddingTop="5px"
+                android:text="start exame"
+                android:textColor="#fff"
+                android:textSize="20px"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15px"
+                android:background="@drawable/pressed_signup_action"
+                android:paddingBottom="5px"
+                android:paddingTop="5px"
+                android:text="purchase exame"
+                android:textColor="#fff"
+                android:textSize="20px"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="300px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15px"
+                android:background="@drawable/pressed_trial_action"
+                android:paddingBottom="5px"
+                android:paddingTop="5px"
+                android:text="start trial exame"
+                android:textColor="#fff"
+                android:textSize="20px"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50px" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

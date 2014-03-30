@@ -27,6 +27,8 @@
         </activity>
         <activity android:name="com.nvn.quizapp.ExamsActivity" >
         </activity>
+        <activity android:name="com.nvn.quizapp.StartExamsActivity" >
+        </activity>
     </application>
 
 </manifest>

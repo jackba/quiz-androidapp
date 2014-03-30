@@ -46,9 +46,10 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="1"
             android:background="#3598db"
-            android:drawableTop="@drawable/demo"
+            android:drawableTop="@drawable/pressed_exams_action"
             android:gravity="center_horizontal"
-            android:text="btn_exams" />
+            android:text="@string/exams"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/btn_awards"
@@ -56,10 +57,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="1"
-            android:drawableTop="@drawable/ic_launcher"
+            android:background="#3598db"
+            android:drawableTop="@drawable/pressed_awards_action"
             android:gravity="center_horizontal"
-            android:text="btn_awards"
-            android:visibility="visible" />
+            android:text="@string/awards"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/btn_about"
@@ -67,10 +69,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="1"
-            android:drawableTop="@drawable/ic_launcher"
+            android:background="#3598db"
+            android:drawableTop="@drawable/pressed_about_action"
             android:gravity="center_horizontal"
-            android:text="btn_about"
-            android:visibility="visible" />
+            android:text="@string/about"
+            android:textColor="#fff" />
     </LinearLayout>
 
 </RelativeLayout>

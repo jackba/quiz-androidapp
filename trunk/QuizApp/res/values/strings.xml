@@ -7,5 +7,7 @@
     <string name="register_with_facebook">Register With Facebook</string>
     <string name="signup_with_email">Sign Up With Email</string>
     <string name="exams">Exams</string>
-
+	<string name="awards">Awards</string>
+	<string name="about">About</string>
+	<string name="back">Back</string>
 </resources>

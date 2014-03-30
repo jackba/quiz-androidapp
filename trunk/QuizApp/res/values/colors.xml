@@ -5,5 +5,6 @@
     <color name="register_pressed">#5a7dbf</color>
     <color name="signup_normal">#00be33</color>
     <color name="signup_pressed">#1be852</color>
-
+	<color name="trial_normal">#3598db</color>
+	<color name="trial_pressed">#4fb6fc</color>
 </resources>

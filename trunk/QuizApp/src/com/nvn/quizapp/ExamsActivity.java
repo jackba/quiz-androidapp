@@ -11,11 +11,13 @@ import com.nvn.quizapp.adapters.NewsRowAdapter;
 import com.nvn.quizapp.utils.SessionManager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class ExamsActivity extends BaseActivity implements OnItemClickListener {
 	private ListView mLvExams;
@@ -51,7 +53,9 @@ public class ExamsActivity extends BaseActivity implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int rg2, long arg3) {
-		SessionManager.getSessionManager().setCurExam(arrayOfList.get(rg2));
+		// SessionManager.getSessionManager().setCurExam(arrayOfList.get(rg2));
+		// Toast.makeText(this, "Show", Toast.LENGTH_LONG).show();
+		startActivity(new Intent(ExamsActivity.this, StartExamsActivity.class));
 	}
 
 	public void setAdapterToListview() {
