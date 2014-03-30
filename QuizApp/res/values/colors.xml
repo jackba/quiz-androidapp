@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="abc">#1110ff</color>
+    <color name="register_normal">#355aa1</color>
+    <color name="register_pressed">#5a7dbf</color>
+    <color name="signup_normal">#00be33</color>
+    <color name="signup_pressed">#1be852</color>
+
+</resources>
