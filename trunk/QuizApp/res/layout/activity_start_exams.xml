@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5px"
-            android:background="@drawable/pressed_back_action" />
+            android:background="@drawable/ic_back_normal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5px"
+                android:gravity="center"
                 android:text="Few lines or more, centered or not, 30 font"
                 android:textColor="#3d97d5"
                 android:textSize="20px"
@@ -134,9 +135,9 @@
 
                 <View
                     android:layout_width="1px"
-                    android:layout_height="50px"
-                    android:layout_marginBottom="5px"
+                    android:layout_height="fill_parent"
                     android:layout_marginTop="5px"
+                    android:layout_marginBottom="5px"
                     android:background="#3d97d5" />
 
                 <LinearLayout
@@ -186,6 +187,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:text="To pass the exame you need give correct answer on"
                 android:textColor="#3d97d5" />
 
