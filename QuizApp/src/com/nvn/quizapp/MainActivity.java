@@ -9,10 +9,20 @@ import com.nvn.quizapp.ws.GetQuizDataWSControl;
 import com.nvn.quizapp.ws.WebServiceCommunicatorListener;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-public class MainActivity extends BaseActivity implements
+public class MainActivity extends BaseActivity implements OnClickListener,
 		WebServiceCommunicatorListener {
+
+	private ImageView mImvLogo;
+	private TextView mTvTitle;
+	private Button mBtnRegister, mBtnSignUp;
 	private ProgressDialog mPdLoading;
 
 	@Override
@@ -28,19 +38,37 @@ public class MainActivity extends BaseActivity implements
 
 	@Override
 	public void initViews() {
-
+		mImvLogo = (ImageView) findViewById(R.id.imv_logo);
+		mTvTitle = (TextView) findViewById(R.id.tv_title);
+		mBtnRegister = (Button) findViewById(R.id.btn_register);
+		mBtnSignUp = (Button) findViewById(R.id.btn_signup);
 	}
 
 	@Override
 	public void initListeners() {
-
+		mBtnRegister.setOnClickListener(this);
+		mBtnSignUp.setOnClickListener(this);
 	}
 
 	@Override
 	public void initProperties() {
+		mImvLogo.setBackgroundResource(R.drawable.ic_logo);
+		mTvTitle.setText("VCA EXAMEN TEST");
 		mPdLoading = new ProgressDialog(this);
 		mPdLoading.setCancelable(false);
 		mPdLoading.setMessage("Loading...");
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_signup:
+			startActivity(new Intent(MainActivity.this, ExamsActivity.class));
+			break;
+
+		default:
+			break;
+		}
 	}
 
 	private void getData() {
