@@ -1,8 +1,10 @@
-package com.nvn.quizapp;
+package com.nvn.quizapp.adapters;
 
 import java.util.List;
 
+import com.nvn.quizapp.R;
 import com.nvn.quizapp.Objects.Exam;
+import com.nvn.quizapp.R.id;
 
 import android.app.Activity;
 import android.content.Context;
@@ -54,6 +56,7 @@ public class NewsRowAdapter extends ArrayAdapter<Exam> {
 		holder.tvTimeLimit = (TextView) view.findViewById(R.id.tv_time_exams);
 		holder.imgPurchased = (ImageView) view.findViewById(R.id.imv_purchased);
 		holder.imgPreview = (ImageView) view.findViewById(R.id.imv_preview);
+		
 		holder.tvTitleExams.setText("hascac");
 
 		return view;

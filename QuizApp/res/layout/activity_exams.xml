@@ -45,10 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="1"
-            android:drawableTop="@drawable/ic_launcher"
+            android:background="#3598db"
+            android:drawableTop="@drawable/demo"
             android:gravity="center_horizontal"
-            android:text="btn_exams"
-            android:visibility="visible" />
+            android:text="btn_exams" />
 
         <Button
             android:id="@+id/btn_awards"
