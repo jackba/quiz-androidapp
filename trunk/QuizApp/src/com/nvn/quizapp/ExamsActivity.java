@@ -3,8 +3,12 @@ package com.nvn.quizapp;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.http.io.SessionOutputBuffer;
+
 import com.nvn.quizapp.Objects.Exam;
 import com.nvn.quizapp.Objects.Quiz;
+import com.nvn.quizapp.adapters.NewsRowAdapter;
+import com.nvn.quizapp.utils.SessionManager;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -16,8 +20,8 @@ import android.widget.ListView;
 public class ExamsActivity extends BaseActivity implements OnItemClickListener {
 	private ListView mLvExams;
 	private Context mContext;
-	List<Exam> arrayOfList;
-	NewsRowAdapter objAdapter;
+	private List<Exam> arrayOfList;
+	private NewsRowAdapter objAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +44,14 @@ public class ExamsActivity extends BaseActivity implements OnItemClickListener {
 
 	@Override
 	public void initProperties() {
-		arrayOfList = new ArrayList<Exam>();
+		arrayOfList = SessionManager.getSessionManager().getCurQuiz()
+				.getExams();
+		setAdapterToListview();
 	}
 
 	@Override
-	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		// TODO Auto-generated method stub
-
+	public void onItemClick(AdapterView<?> arg0, View arg1, int rg2, long arg3) {
+		SessionManager.getSessionManager().setCurExam(arrayOfList.get(rg2));
 	}
 
 	public void setAdapterToListview() {
