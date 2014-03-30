@@ -4,5 +4,8 @@
     <string name="app_name">QuizApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="register_with_facebook">Register With Facebook</string>
+    <string name="signup_with_email">Sign Up With Email</string>
+    <string name="exams">Exams</string>
 
 </resources>
