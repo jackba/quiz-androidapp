@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#3598db" >
+
+        <LinearLayout
+            android:id="@+id/ll_top1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="15px"
+                    android:layout_height="15px"
+                    android:background="@drawable/ic_clock2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remaining"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="15px"
+                    android:layout_height="15px"
+                    android:background="@drawable/ic_skylight" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7/30 Questions"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_top1"
+            android:background="#3598db"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="25:55"
+                android:textColor="#fff"
+                android:textSize="35px"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <SeekBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="20px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/progressbar_question"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="76%"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="60px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="5px"
+            android:background="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/rl_top"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <VideoView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#3598db"
+                    android:orientation="horizontal"
+                    android:weightSum="13" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_play" />
+
+                    <SeekBar
+                        android:layout_width="fill_parent"
+                        android:layout_height="20px"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginRight="10px"
+                        android:layout_weight="10"
+                        android:progress="50"
+                        android:progressDrawable="@drawable/progressbar_question"
+                        android:thumb="@null" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_sound" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_zoom" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginTop="10px"
+                android:text="What song can you hear in this audio?"
+                android:textColor="#3598db"
+                android:textSize="20px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:background="#3598db"
+                android:orientation="horizontal"
+                android:weightSum="12" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_play" />
+
+                <SeekBar
+                    android:layout_width="fill_parent"
+                    android:layout_height="20px"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10px"
+                    android:layout_marginRight="10px"
+                    android:layout_weight="10"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/progressbar_sound"
+                    android:thumb="@null" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_sound" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:background="#3598db"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/pressed_answer_action"
+                        android:text="A"
+                        android:textColor="#3598db"
+                        android:textSize="20px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="The Netherlands"
+                        android:textColor="#3598db"
+                        android:textSize="20px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/pressed_answer_action"
+                        android:text="B"
+                        android:textColor="#3598db"
+                        android:textSize="20px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="Ukraine"
+                        android:textColor="#3598db"
+                        android:textSize="20px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/pressed_answer_action"
+                        android:text="C"
+                        android:textColor="#3598db"
+                        android:textSize="20px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="United States of America"
+                        android:textColor="#3598db"
+                        android:textSize="20px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:background="@drawable/pressed_answer_action"
+                        android:text="D"
+                        android:textColor="#3598db"
+                        android:textSize="20px"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:text="France"
+                        android:textColor="#3598db"
+                        android:textSize="20px" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#3598db"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pressed_first_action" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pressed_prev_action" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_pause"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pressed_pause_action" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pressed_next_action" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/pressed_end_action" />
+    </LinearLayout>
+
+</RelativeLayout>

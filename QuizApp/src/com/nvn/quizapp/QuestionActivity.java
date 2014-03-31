@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class StartExamsActivity extends BaseActivity implements OnClickListener {
-	private Button mBtnStartExame;
+public class QuestionActivity extends BaseActivity implements OnClickListener {
+	private Button mBtnPause;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_start_exams);
+		setContentView(R.layout.activity_question);
 		initViews();
 		initProperties();
 		initListeners();
@@ -20,12 +20,12 @@ public class StartExamsActivity extends BaseActivity implements OnClickListener 
 
 	@Override
 	public void initViews() {
-		mBtnStartExame = (Button) findViewById(R.id.btn_start_exame);
+		mBtnPause = (Button) findViewById(R.id.btn_pause);
 	}
 
 	@Override
 	public void initListeners() {
-		mBtnStartExame.setOnClickListener(this);
+		mBtnPause.setOnClickListener(this);
 	}
 
 	@Override
@@ -37,9 +37,8 @@ public class StartExamsActivity extends BaseActivity implements OnClickListener 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btn_start_exame:
-			startActivity(new Intent(StartExamsActivity.this,
-					QuestionActivity.class));
+		case R.id.btn_pause:
+			startActivity(new Intent(QuestionActivity.this, PauseActivity.class));
 			break;
 
 		default:
