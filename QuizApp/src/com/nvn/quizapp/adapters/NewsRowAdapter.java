@@ -55,13 +55,14 @@ public class NewsRowAdapter extends ArrayAdapter<Exam> {
 		holder.tvNumberQuestion = (TextView) view
 				.findViewById(R.id.tv_number_question);
 		holder.tvTimeLimit = (TextView) view.findViewById(R.id.tv_time_exams);
-		holder.imgPurchased = (ImageView) view.findViewById(R.id.imv_purchased);
-		holder.imgPreview = (ImageView) view.findViewById(R.id.imv_preview);
+//		holder.imgPurchased = (ImageView) view.findViewById(R.id.imv_purchased);
+//		holder.imgPreview = (ImageView) view.findViewById(R.id.imv_preview);
 		
 		
 		holder.tvTitleExams.setText("Title number 1");
-		holder.tvNumberQuestion.setText(objBean.getPrice()+"");
-//		holder.tvTimeLimit.setText(objBean.getSubjects().size());
+		holder.tvNumberQuestion.setText("100 questions");
+		holder.tvTimeLimit.setText("1 hour 45 minutes");
+		holder.imgExams.setBackgroundResource(R.drawable.ic_demo2);
 		
 		return view;
 	}

@@ -54,7 +54,7 @@ public class ExamsActivity extends BaseActivity implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int rg2, long arg3) {
 		// SessionManager.getSessionManager().setCurExam(arrayOfList.get(rg2));
-		// Toast.makeText(this, "Show", Toast.LENGTH_LONG).show();
+		 Toast.makeText(this, "Show", Toast.LENGTH_LONG).show();
 		startActivity(new Intent(ExamsActivity.this, StartExamsActivity.class));
 	}
 
