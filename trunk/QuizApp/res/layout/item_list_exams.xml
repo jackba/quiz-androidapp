@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:paddingTop="5px"
-    android:paddingBottom="5px"
+    android:paddingBottom="15px"
+    android:paddingTop="15px"
     android:weightSum="3" >
+
     <ImageView
         android:id="@+id/imv_exams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100px"
+        android:layout_height="100px"
         android:layout_gravity="center"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
         android:layout_weight="1" />
 
     <LinearLayout
@@ -25,8 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1"
-            android:textStyle="bold"
-            android:textColor="#3d97d5" />
+            android:textColor="#3d97d5"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_number_question"
@@ -43,21 +46,43 @@
             android:textColor="#3d97d5" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imv_purchased"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginRight="7px"
         android:layout_weight="1"
-        android:src="@drawable/ic_preview" />
+        android:background="@drawable/pressed_preview_action"
+        android:gravity="center"
+        android:paddingBottom="4px"
+        android:paddingTop="4px"
+        android:visibility="gone" >
 
-    <ImageView
-        android:id="@+id/imv_preview"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREVIEW"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginRight="7px"
         android:layout_weight="1"
-        android:src="@drawable/ic_purchased"
-        android:visibility="gone" />
+        android:background="@drawable/pressed_purchased_action"
+        android:gravity="center"
+        android:paddingBottom="4px"
+        android:paddingTop="4px" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PURCHASED"
+            android:textColor="#1db019"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>
