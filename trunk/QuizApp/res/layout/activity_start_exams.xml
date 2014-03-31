@@ -215,6 +215,7 @@
                 android:background="#3d97d5" />
 
             <Button
+                android:id="@+id/btn_start_exame"
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
