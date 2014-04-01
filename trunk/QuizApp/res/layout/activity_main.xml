@@ -39,7 +39,7 @@
                 android:background="@drawable/pressed_signup_action"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Sign In"
+                android:text="Sign Up"
                 android:textColor="#fff" />
 
             <Button
@@ -50,7 +50,7 @@
                 android:background="@drawable/pressed_register_action"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Sign Up"
+                android:text="Sign In"
                 android:textColor="#fff" />
         </LinearLayout>
     </ScrollView>

@@ -9,13 +9,30 @@
         android:layout_height="wrap_content"
         android:background="#3598db" >
 
-        <Button
-            android:id="@+id/btn_back"
+        <LinearLayout
             android:layout_width="wrap_content"
+            android:id="@+id/ll_back"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/ic_back_normal" />
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/pressed_back_action" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/btn_back"
+                android:padding="10dp"
+                android:text="@string/back"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,16 +42,6 @@
             android:text="@string/exams"
             android:textColor="#fff"
             android:textSize="25dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/btn_back"
-            android:padding="10dp"
-            android:text="@string/back"
-            android:textColor="#fff"
-            android:textSize="20dp" />
     </RelativeLayout>
 
     <ScrollView
@@ -156,7 +163,7 @@
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:background="@drawable/ic_question" />
+                            android:background="@drawable/ic_question_mark" />
 
                         <TextView
                             android:layout_width="wrap_content"

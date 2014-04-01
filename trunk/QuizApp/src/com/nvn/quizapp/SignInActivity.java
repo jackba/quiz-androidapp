@@ -9,12 +9,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class SignInActivity extends BaseActivity implements OnClickListener {
-	private Button mBtnSignIn;
+	private Button mBtnSignUp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_sign_in);
+		setContentView(R.layout.activity_sign_up);
 		initViews();
 		initProperties();
 		initListeners();
@@ -22,12 +22,12 @@ public class SignInActivity extends BaseActivity implements OnClickListener {
 
 	@Override
 	public void initViews() {
-		mBtnSignIn = (Button) findViewById(R.id.btn_sign_in);
+		mBtnSignUp = (Button) findViewById(R.id.btn_sign_up);
 	}
 
 	@Override
 	public void initListeners() {
-		mBtnSignIn.setOnClickListener(this);
+		mBtnSignUp.setOnClickListener(this);
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class SignInActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.btn_sign_in:
+		case R.id.btn_sign_up:
 			startActivity(new Intent(SignInActivity.this, HomeActivity.class));
 			break;
 

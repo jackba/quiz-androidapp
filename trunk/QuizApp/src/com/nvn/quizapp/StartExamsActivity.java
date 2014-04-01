@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class StartExamsActivity extends BaseActivity implements OnClickListener {
 	private Button mBtnStartExame;
 	private SeekBar mSbStartExame;
+	private LinearLayout mLlBack;
 	int oldProgress;
 
 	@Override
@@ -26,11 +28,13 @@ public class StartExamsActivity extends BaseActivity implements OnClickListener 
 	public void initViews() {
 		mBtnStartExame = (Button) findViewById(R.id.btn_start_exame);
 		mSbStartExame = (SeekBar) findViewById(R.id.sb_start_exam);
+		mLlBack = (LinearLayout) findViewById(R.id.ll_back);
 	}
 
 	@Override
 	public void initListeners() {
 		mBtnStartExame.setOnClickListener(this);
+		mLlBack.setOnClickListener(this);
 		mSbStartExame.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
 			@Override
@@ -64,7 +68,9 @@ public class StartExamsActivity extends BaseActivity implements OnClickListener 
 			startActivity(new Intent(StartExamsActivity.this,
 					QuestionActivity.class));
 			break;
-
+		case R.id.ll_back:
+			finish();
+			break;
 		default:
 			break;
 		}
