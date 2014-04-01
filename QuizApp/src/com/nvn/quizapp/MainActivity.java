@@ -33,7 +33,8 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		initViews();
 		initListeners();
 		initProperties();
-		getData();
+		
+//		getData();
 	}
 
 	@Override

@@ -11,14 +11,14 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.nvn.quizapp.Objects.Exam;
-import com.nvn.quizapp.adapters.NewsRowAnswerAdapter;
+import com.nvn.quizapp.adapters.AnswersAdapter;
 import com.nvn.quizapp.utils.SessionManager;
 
 public class CompletedActivity extends BaseActivity implements OnClickListener {
 	private ListView mLvAnswer;
 	private Context mContext;
 	private List<Exam> arrayOfList;
-	private NewsRowAnswerAdapter objAdapter;
+	private AnswersAdapter objAdapter;
 	private Button mBtnShowResult;
 
 	@Override
@@ -50,7 +50,7 @@ public class CompletedActivity extends BaseActivity implements OnClickListener {
 	}
 
 	public void setAdapterToListview() {
-		objAdapter = new NewsRowAnswerAdapter(CompletedActivity.this,
+		objAdapter = new AnswersAdapter(CompletedActivity.this,
 				R.layout.item_list_answer, arrayOfList);
 		mLvAnswer.setAdapter(objAdapter);
 	}

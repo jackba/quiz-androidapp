@@ -15,41 +15,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:padding="10px"
+            android:padding="10dp"
             android:text="Congratulations!"
             android:textColor="#fff"
-            android:textSize="25px" />
+            android:textSize="25sp" />
     </RelativeLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
-        android:layout_marginTop="5px"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
         android:text="You have completed this exam!"
         android:textColor="#3598db"
-        android:textSize="20px"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="5px"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
         android:background="#3d97d5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5px"
+        android:layout_marginTop="5dp"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" >
 
         <ImageView
-            android:layout_width="12px"
-            android:layout_height="12px"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:background="@drawable/ic_clock" />
 
         <TextView
@@ -62,60 +62,60 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5px"
+        android:layout_marginBottom="5dp"
         android:text="25:55"
         android:textColor="#3598db"
-        android:textSize="40px"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="50px"
-        android:layout_marginRight="50px"
-        android:layout_marginTop="5px"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="5dp"
         android:background="#3d97d5" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50px"
-        android:layout_marginRight="50px"
-        android:layout_marginTop="5px"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="5dp"
         android:gravity="center_horizontal"
         android:text=" You still have time to review some of the answer. Select them below."
         android:textColor="#3598db"
-        android:textSize="15px" />
+        android:textSize="15sp" />
 
     <Button
-        android:layout_width="300px"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5px"
+        android:layout_marginTop="5dp"
         android:id="@+id/btn_show_result"
         android:background="@drawable/pressed_signup_action"
-        android:paddingBottom="5px"
-        android:paddingTop="5px"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:text="show the result"
         android:textColor="#fff"
-        android:textSize="25px" />
+        android:textSize="25sp" />
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_marginBottom="5px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="10px"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:background="#3d97d5" />
 
     <ListView
         android:id="@+id/lv_answer"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="20px"
-        android:layout_marginRight="20px"
-        android:layout_marginTop="5px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
         android:listSelector="@android:color/transparent"
         android:scrollbars="none" >
     </ListView>

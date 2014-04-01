@@ -17,14 +17,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class NewsRowAdapter extends ArrayAdapter<Exam> {
+public class ExamsAdapter extends ArrayAdapter<Exam> {
 
 	private Activity activity;
 	private List<Exam> items;
 	private Exam objBean;
 	private int row;
 
-	public NewsRowAdapter(Activity act, int resource, List<Exam> arrayList) {
+	public ExamsAdapter(Activity act, int resource, List<Exam> arrayList) {
 		super(act, resource, arrayList);
 		this.activity = act;
 		this.row = resource;
@@ -45,10 +45,10 @@ public class NewsRowAdapter extends ArrayAdapter<Exam> {
 			holder = (ViewHolder) view.getTag();
 		}
 
-		if ((items == null) || ((position + 1) > items.size()))
-			return view;
-
-		objBean = items.get(position);
+//		if ((items == null) || ((position + 1) > items.size()))
+//			return view;
+//
+//		objBean = items.get(position);
 
 		holder.imgExams = (ImageView) view.findViewById(R.id.imv_exams);
 		holder.tvTitleExams = (TextView) view.findViewById(R.id.tv_title_exams);
@@ -67,6 +67,11 @@ public class NewsRowAdapter extends ArrayAdapter<Exam> {
 		return view;
 	}
 
+	@Override
+	public int getCount() {
+		return 20;
+	}
+	
 	public class ViewHolder {
 		public TextView tvTitleExams, tvNumberQuestion, tvTimeLimit;
 		public ImageView imgExams, imgPurchased, imgPreview;

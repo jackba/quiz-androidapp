@@ -14,27 +14,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5px"
+            android:layout_marginLeft="5dp"
             android:background="@drawable/ic_back_normal" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:padding="10px"
+            android:padding="10dp"
             android:text="@string/exams"
             android:textColor="#fff"
-            android:textSize="25px" />
+            android:textSize="25dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@id/btn_back"
-            android:padding="10px"
+            android:padding="10dp"
             android:text="@string/back"
             android:textColor="#fff"
-            android:textSize="20px" />
+            android:textSize="20dp" />
     </RelativeLayout>
 
     <ScrollView
@@ -53,10 +53,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5px"
+                android:layout_marginTop="5dp"
                 android:text="Title of exame"
                 android:textColor="#3d97d5"
-                android:textSize="25px"
+                android:textSize="25dp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -68,11 +68,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5px"
+                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:text="Few lines or more, centered or not, 30 font"
                 android:textColor="#3d97d5"
-                android:textSize="20px"
+                android:textSize="20dp"
                 android:textStyle="normal" />
 
             <TextView
@@ -81,14 +81,14 @@
                 android:layout_gravity="center"
                 android:text="Some little description of exam"
                 android:textColor="#3d97d5"
-                android:textSize="20px"
+                android:textSize="20dp"
                 android:textStyle="normal" />
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="15px"
-                android:layout_marginRight="15px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="#3d97d5" />
 
             <LinearLayout
@@ -112,14 +112,14 @@
                         android:orientation="horizontal" >
 
                         <ImageView
-                            android:layout_width="12px"
-                            android:layout_height="12px"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
                             android:background="@drawable/ic_clock" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3px"
+                            android:layout_marginLeft="3dp"
                             android:text="Time"
                             android:textColor="#3d97d5" />
                     </LinearLayout>
@@ -129,15 +129,15 @@
                         android:layout_height="wrap_content"
                         android:text="25:55"
                         android:textColor="#3d97d5"
-                        android:textSize="45px"
+                        android:textSize="45dp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
-                    android:layout_width="1px"
+                    android:layout_width="1dp"
                     android:layout_height="fill_parent"
-                    android:layout_marginBottom="5px"
-                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:background="#3d97d5" />
 
                 <LinearLayout
@@ -154,14 +154,14 @@
                         android:orientation="horizontal" >
 
                         <ImageView
-                            android:layout_width="12px"
-                            android:layout_height="12px"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
                             android:background="@drawable/ic_question" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3px"
+                            android:layout_marginLeft="3dp"
                             android:text="Question"
                             android:textColor="#3d97d5" />
                     </LinearLayout>
@@ -171,16 +171,16 @@
                         android:layout_height="wrap_content"
                         android:text="100"
                         android:textColor="#3d97d5"
-                        android:textSize="45px"
+                        android:textSize="45dp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="15px"
-                android:layout_marginRight="15px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="#3d97d5" />
 
             <TextView
@@ -193,7 +193,7 @@
 
             <SeekBar
                 android:id="@+id/sb_start_exam"
-                android:layout_width="300px"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:progress="75"
@@ -206,58 +206,58 @@
                 android:layout_gravity="center"
                 android:text="75/100"
                 android:textColor="#3d97d5"
-                android:textSize="30px" />
+                android:textSize="30dp" />
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="15px"
-                android:layout_marginRight="15px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="#3d97d5" />
 
             <Button
                 android:id="@+id/btn_start_exame"
-                android:layout_width="300px"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15px"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/pressed_signup_action"
-                android:paddingBottom="5px"
-                android:paddingTop="5px"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:text="start exame"
                 android:textColor="#fff"
-                android:textSize="20px"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="300px"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15px"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/pressed_signup_action"
-                android:paddingBottom="5px"
-                android:paddingTop="5px"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:text="purchase exame"
                 android:textColor="#fff"
-                android:textSize="20px"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="300px"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15px"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/pressed_trial_action"
-                android:paddingBottom="5px"
-                android:paddingTop="5px"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
                 android:text="start trial exame"
                 android:textColor="#fff"
-                android:textSize="20px"
+                android:textSize="20dp"
                 android:textStyle="bold" />
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="50px" />
+                android:layout_height="50dp" />
         </LinearLayout>
     </ScrollView>
 

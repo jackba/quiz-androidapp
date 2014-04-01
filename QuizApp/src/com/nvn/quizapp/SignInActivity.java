@@ -1,5 +1,7 @@
 package com.nvn.quizapp;
 
+import com.nvn.quizapp.fragments.ExamsFragment;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -38,7 +40,7 @@ public class SignInActivity extends BaseActivity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_sign_in:
-			startActivity(new Intent(SignInActivity.this, ExamsActivity.class));
+			startActivity(new Intent(SignInActivity.this, HomeActivity.class));
 			break;
 
 		default:
