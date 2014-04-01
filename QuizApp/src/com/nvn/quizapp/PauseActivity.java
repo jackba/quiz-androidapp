@@ -1,8 +1,12 @@
 package com.nvn.quizapp;
 
 import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class PauseActivity extends BaseActivity{
+public class PauseActivity extends BaseActivity {
+	private SeekBar mSbPause;
+	int oldProgressPause;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,20 +19,36 @@ public class PauseActivity extends BaseActivity{
 
 	@Override
 	public void initViews() {
-		// TODO Auto-generated method stub
-		
+		mSbPause = (SeekBar) findViewById(R.id.sb_pause);
 	}
 
 	@Override
 	public void initListeners() {
-		// TODO Auto-generated method stub
-		
+		mSbPause.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				seekBar.setProgress(oldProgressPause);
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				oldProgressPause = seekBar.getProgress();
+				seekBar.setProgress(oldProgressPause);
+			}
+
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				seekBar.setProgress(oldProgressPause);
+			}
+		});
 	}
 
 	@Override
 	public void initProperties() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

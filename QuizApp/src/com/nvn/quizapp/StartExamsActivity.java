@@ -5,9 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
 
 public class StartExamsActivity extends BaseActivity implements OnClickListener {
 	private Button mBtnStartExame;
+	private SeekBar mSbStartExame;
+	int oldProgress;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,17 +25,36 @@ public class StartExamsActivity extends BaseActivity implements OnClickListener 
 	@Override
 	public void initViews() {
 		mBtnStartExame = (Button) findViewById(R.id.btn_start_exame);
+		mSbStartExame = (SeekBar) findViewById(R.id.sb_start_exam);
 	}
 
 	@Override
 	public void initListeners() {
 		mBtnStartExame.setOnClickListener(this);
+		mSbStartExame.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				seekBar.setProgress(oldProgress);
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+				oldProgress = seekBar.getProgress();
+				seekBar.setProgress(oldProgress);
+			}
+
+			@Override
+			public void onProgressChanged(SeekBar seekBar, int progress,
+					boolean fromUser) {
+				seekBar.setProgress(oldProgress);
+
+			}
+		});
 	}
 
 	@Override
 	public void initProperties() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override

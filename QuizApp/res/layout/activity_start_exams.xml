@@ -136,8 +136,8 @@
                 <View
                     android:layout_width="1px"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="5px"
                     android:layout_marginBottom="5px"
+                    android:layout_marginTop="5px"
                     android:background="#3d97d5" />
 
                 <LinearLayout
@@ -192,12 +192,13 @@
                 android:textColor="#3d97d5" />
 
             <SeekBar
+                android:id="@+id/sb_start_exam"
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" 
+                android:layout_gravity="center"
+                android:progress="75"
                 android:progressDrawable="@drawable/progressbar"
-                android:thumb="@null"
-                android:progress="50"/>
+                android:thumb="@null" />
 
             <TextView
                 android:layout_width="wrap_content"
