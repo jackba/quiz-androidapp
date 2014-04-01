@@ -18,28 +18,49 @@
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
             android:name="com.nvn.quizapp.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.nvn.quizapp.ExamsActivity" >
+        <activity
+            android:name="com.nvn.quizapp.ExamsActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.StartExamsActivity" >
+        <activity
+            android:name="com.nvn.quizapp.StartExamsActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.QuestionActivity" >
+        <activity
+            android:name="com.nvn.quizapp.QuestionActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.PauseActivity" >
+        <activity
+            android:name="com.nvn.quizapp.PauseActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.CompletedActivity" >
+        <activity
+            android:name="com.nvn.quizapp.CompletedActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.AwardsActivity" >
+        <activity
+            android:name="com.nvn.quizapp.AwardsActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.AboutActivity" >
+        <activity
+            android:name="com.nvn.quizapp.AboutActivity"
+            android:screenOrientation="portrait" >
         </activity>
-        <activity android:name="com.nvn.quizapp.SignInActivity" >
+        <activity
+            android:name="com.nvn.quizapp.SignInActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.nvn.quizapp.SignUpActivity"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

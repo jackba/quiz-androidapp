@@ -1,13 +1,18 @@
 package com.nvn.quizapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
-public class SignInActivity extends BaseActivity {
+public class SignInActivity extends BaseActivity implements OnClickListener {
+	private Button mBtnSignIn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login_in);
+		setContentView(R.layout.activity_sign_in);
 		initViews();
 		initProperties();
 		initListeners();
@@ -15,20 +20,30 @@ public class SignInActivity extends BaseActivity {
 
 	@Override
 	public void initViews() {
-		// TODO Auto-generated method stub
-
+		mBtnSignIn = (Button) findViewById(R.id.btn_sign_in);
 	}
 
 	@Override
 	public void initListeners() {
-		// TODO Auto-generated method stub
-
+		mBtnSignIn.setOnClickListener(this);
 	}
 
 	@Override
 	public void initProperties() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_sign_in:
+			startActivity(new Intent(SignInActivity.this, ExamsActivity.class));
+			break;
+
+		default:
+			break;
+		}
 	}
 
 }
