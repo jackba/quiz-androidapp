@@ -63,11 +63,16 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_signup:
-			if(SessionManager.getSessionManager().getCurQuiz() != null){
-				startActivity(new Intent(MainActivity.this, ExamsActivity.class));
-			}
+			// if (SessionManager.getSessionManager().getCurQuiz() != null) {
+			// startActivity(new Intent(MainActivity.this,
+			// ExamsActivity.class));
+			// }
 			break;
-
+		case R.id.btn_register:
+			// if (SessionManager.getSessionManager().getCurQuiz() != null) {
+			startActivity(new Intent(MainActivity.this, SignInActivity.class));
+			// }
+			break;
 		default:
 			break;
 		}
