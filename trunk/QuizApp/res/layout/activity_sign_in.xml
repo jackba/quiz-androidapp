@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3598db"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIGN IN"
+                android:textColor="#fff"
+                android:textSize="30px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imv_logo"
+                android:layout_width="250px"
+                android:layout_height="250px"
+                android:background="@drawable/ic_logo" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#fff" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="145px"
+                    android:layout_height="wrap_content"
+                    android:text="User:"
+                    android:textColor="#fff"
+                    android:textSize="20px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Input your email" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="145px"
+                    android:layout_height="wrap_content"
+                    android:text="Password:"
+                    android:textColor="#fff"
+                    android:textSize="20px" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Input your password"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#fff" />
+
+            <Button
+                android:layout_width="300px"
+                android:id="@+id/btn_sign_in"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5px"
+                android:background="@drawable/pressed_signup_action"
+                android:paddingBottom="10px"
+                android:paddingTop="10px"
+                android:text="Sign In"
+                android:textColor="#fff" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
