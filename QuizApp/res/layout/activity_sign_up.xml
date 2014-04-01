@@ -73,7 +73,7 @@
                             android:background="#e9e9e9"
                             android:hint="hello@gmail.com"
                             android:textColor="#0099cc"
-                            android:textColorHint="#0099cc" />
+                            android:textColorHint="#89b5ec" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -97,7 +97,7 @@
                             android:hint="******"
                             android:inputType="textPassword"
                             android:textColor="#0099cc"
-                            android:textColorHint="#0099cc" />
+                            android:textColorHint="#89b5ec" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
