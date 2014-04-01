@@ -7,7 +7,9 @@
     <string name="register_with_facebook">Register With Facebook</string>
     <string name="signup_with_email">Sign Up With Email</string>
     <string name="exams">Exams</string>
-	<string name="awards">Awards</string>
-	<string name="about">About</string>
-	<string name="back">Back</string>
+    <string name="awards">Awards</string>
+    <string name="about">About</string>
+    <string name="back">Back</string>
+    <string name="content_about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim ultricies neque, et adipiscing mi scelerisque vitae. Mauris ut tellus interdum, vestibulum nibh vitae, dictum nibh. Phasellus tempor commodo convalis. Fusce imperdiet, felis id cursus lobortis, dolor ligula tristique justo, quis vestibulum nisi justo blandit enim. Vivamus ullamcorper risus quis nisi vulputate auctor. In dolor enim, egestas eu tellus sit amet, feugiat blandit ligula. Vestibulum facilisis libero quis nunc dignissim, nec rutrum velit vulputate.</string>
+
 </resources>

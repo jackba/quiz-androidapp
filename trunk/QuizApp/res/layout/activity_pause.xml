@@ -116,6 +116,7 @@
                         <SeekBar
                             android:layout_width="fill_parent"
                             android:layout_height="20px"
+                            android:id="@+id/sb_pause"
                             android:layout_gravity="center"
                             android:layout_marginLeft="10px"
                             android:layout_marginRight="10px"

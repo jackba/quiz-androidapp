@@ -22,6 +22,27 @@
             android:textSize="25px" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_title"
+        android:layout_centerHorizontal="true"
+        android:text="Header"
+        android:textColor="#3598db"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_header"
+        android:layout_gravity="fill_horizontal"
+        android:layout_margin="10px"
+        android:gravity="center"
+        android:text="@string/content_about"
+        android:textColor="#3598db" />
+
     <LinearLayout
         android:id="@+id/ll_tab"
         android:layout_width="fill_parent"
