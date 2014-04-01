@@ -24,21 +24,98 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="5px"
         android:text="You have completed this exam!"
         android:textColor="#3598db"
+        android:textSize="20px"
         android:textStyle="bold" />
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
         android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
         android:layout_marginTop="5px"
         android:background="#3d97d5" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="12px"
+            android:layout_height="12px"
+            android:background="@drawable/ic_clock" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Time Remaining"
+            android:textColor="#3598db" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:text="25:55"
+        android:textColor="#3598db"
+        android:textSize="40px"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="5px"
+        android:background="#3d97d5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5px"
+        android:text=" You still have time to review some of the answer. Select them below."
+        android:textColor="#3598db"
+        android:textSize="15px" />
+
+    <Button
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5px"
+        android:background="@drawable/pressed_signup_action"
+        android:paddingBottom="5px"
+        android:paddingTop="5px"
+        android:text="show the result"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:background="#3d97d5" />
+
+    <ListView
+        android:id="@+id/lv_answer"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:scrollbars="none" >
+    </ListView>
 
 </LinearLayout>

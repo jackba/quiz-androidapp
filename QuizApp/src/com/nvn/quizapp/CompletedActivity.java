@@ -1,8 +1,21 @@
 package com.nvn.quizapp;
 
+import java.util.List;
+
+import com.nvn.quizapp.Objects.Exam;
+import com.nvn.quizapp.adapters.NewsRowAdapter;
+import com.nvn.quizapp.adapters.NewsRowAnswerAdapter;
+import com.nvn.quizapp.utils.SessionManager;
+
+import android.content.Context;
 import android.os.Bundle;
+import android.widget.ListView;
 
 public class CompletedActivity extends BaseActivity {
+	private ListView mLvAnswer;
+	private Context mContext;
+	private List<Exam> arrayOfList;
+	private NewsRowAnswerAdapter objAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +28,7 @@ public class CompletedActivity extends BaseActivity {
 
 	@Override
 	public void initViews() {
-		// TODO Auto-generated method stub
-
+		mLvAnswer = (ListView) findViewById(R.id.lv_answer);
 	}
 
 	@Override
@@ -27,8 +39,15 @@ public class CompletedActivity extends BaseActivity {
 
 	@Override
 	public void initProperties() {
-		// TODO Auto-generated method stub
+		arrayOfList = SessionManager.getSessionManager().getCurQuiz()
+				.getExams();
+		setAdapterToListview();
 
 	}
 
+	public void setAdapterToListview() {
+		objAdapter = new NewsRowAnswerAdapter(CompletedActivity.this,
+				R.layout.item_list_answer, arrayOfList);
+		mLvAnswer.setAdapter(objAdapter);
+	}
 }
