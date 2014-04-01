@@ -7,7 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class QuestionActivity extends BaseActivity implements OnClickListener {
-	private Button mBtnPause;
+	private Button mBtnPause, mBtnEnd;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,13 @@ public class QuestionActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void initViews() {
 		mBtnPause = (Button) findViewById(R.id.btn_pause);
+		mBtnEnd = (Button) findViewById(R.id.btn_end);
 	}
 
 	@Override
 	public void initListeners() {
 		mBtnPause.setOnClickListener(this);
+		mBtnEnd.setOnClickListener(this);
 	}
 
 	@Override
@@ -40,7 +42,10 @@ public class QuestionActivity extends BaseActivity implements OnClickListener {
 		case R.id.btn_pause:
 			startActivity(new Intent(QuestionActivity.this, PauseActivity.class));
 			break;
-
+		case R.id.btn_end:
+			startActivity(new Intent(QuestionActivity.this,
+					CompletedActivity.class));
+			break;
 		default:
 			break;
 		}
