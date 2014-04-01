@@ -31,12 +31,12 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/tv_show_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="5px"
                 android:layout_marginTop="10px"
-                android:id="@+id/tv_show_result"
                 android:textColor="#3598db"
                 android:textSize="20px"
                 android:textStyle="bold" />
@@ -126,6 +126,7 @@
                 android:background="#5e8dab" />
 
             <Button
+                android:id="@+id/btn_see_our_reco"
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

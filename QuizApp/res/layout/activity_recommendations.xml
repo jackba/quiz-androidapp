@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3598db" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="10px"
+            android:text="Recommendations"
+            android:textColor="#fff"
+            android:textSize="25px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="The following subject had the most icorrect answers:"
+        android:textColor="#3598db"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:background="#5e8dab" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="actors"
+        android:textColor="#3598db"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sb_actors"
+        android:layout_width="200px"
+        android:layout_height="20px"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:progress="42"
+        android:progressDrawable="@drawable/progressbar_actors"
+        android:thumb="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="42%"
+        android:textColor="#3d97d5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="geography"
+        android:textColor="#3598db"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sb_geography"
+        android:layout_width="200px"
+        android:layout_height="20px"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:progress="60"
+        android:progressDrawable="@drawable/progessbar_geography"
+        android:thumb="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="60%"
+        android:textColor="#3d97d5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="10px"
+        android:gravity="center"
+        android:text="fast food"
+        android:textColor="#3598db"
+        android:textSize="20px"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/sb_fast_food"
+        android:layout_width="200px"
+        android:layout_height="20px"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:progress="92"
+        android:progressDrawable="@drawable/progressbar_yourprogress"
+        android:thumb="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="90%"
+        android:textColor="#3d97d5" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="5px"
+        android:background="#5e8dab" />
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10px"
+        android:background="@drawable/pressed_register_action"
+        android:paddingBottom="10px"
+        android:paddingTop="10px"
+        android:text="Try Again"
+        android:visibility="gone"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10px"
+        android:background="@drawable/pressed_signup_action"
+        android:gravity="center"
+        android:paddingBottom="10px"
+        android:paddingTop="10px"
+        android:text="finish"
+        android:textColor="#fff"
+        android:textSize="25px" />
+
+</LinearLayout>
