@@ -62,6 +62,10 @@
             android:name="com.nvn.quizapp.SignUpActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.nvn.quizapp.ResultActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

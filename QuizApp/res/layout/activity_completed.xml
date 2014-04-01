@@ -92,6 +92,7 @@
         android:layout_width="300px"
         android:layout_height="wrap_content"
         android:layout_marginTop="5px"
+        android:id="@+id/btn_show_result"
         android:background="@drawable/pressed_signup_action"
         android:paddingBottom="5px"
         android:paddingTop="5px"
