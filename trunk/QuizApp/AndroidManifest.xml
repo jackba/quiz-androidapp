@@ -39,6 +39,8 @@
         </activity>
         <activity android:name="com.nvn.quizapp.AboutActivity" >
         </activity>
+        <activity android:name="com.nvn.quizapp.SignInActivity" >
+        </activity>
     </application>
 
 </manifest>

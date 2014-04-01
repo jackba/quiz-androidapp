@@ -36,10 +36,10 @@
                 android:id="@+id/btn_register"
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
-                android:background="@drawable/pressed_register_action"
+                android:background="@drawable/pressed_signup_action"
                 android:paddingBottom="10px"
                 android:paddingTop="10px"
-                android:text="@string/register_with_facebook"
+                android:text="Sign In"
                 android:textColor="#fff" />
 
             <Button
@@ -47,10 +47,10 @@
                 android:layout_width="300px"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5px"
-                android:background="@drawable/pressed_signup_action"
+                android:background="@drawable/pressed_register_action"
                 android:paddingBottom="10px"
                 android:paddingTop="10px"
-                android:text="@string/signup_with_email"
+                android:text="Sign Up"
                 android:textColor="#fff" />
         </LinearLayout>
     </ScrollView>
