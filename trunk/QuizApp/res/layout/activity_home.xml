@@ -14,34 +14,23 @@
         android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10px"
-            android:text="About Us"
+            android:padding="10dp"
+            android:text="@string/exams"
             android:textColor="#fff"
-            android:textSize="25px" />
+            android:textSize="25sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <FrameLayout
+        android:id="@+id/content_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_tab"
         android:layout_below="@+id/ll_title"
-        android:layout_centerHorizontal="true"
-        android:text="Header"
-        android:textColor="#3598db"
-        android:textSize="20px"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_header"
-        android:layout_gravity="fill_horizontal"
-        android:layout_margin="10px"
-        android:gravity="center"
-        android:text="@string/content_about"
-        android:textColor="#3598db" />
+        android:padding="10dp" >
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/ll_tab"

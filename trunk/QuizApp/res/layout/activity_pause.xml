@@ -38,7 +38,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Exam VCA (VOL)"
                 android:textColor="#3d97d5"
-                android:textSize="25px"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -48,9 +48,9 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="#3598db" />
 
             <RelativeLayout
@@ -87,14 +87,14 @@
                         android:gravity="center" >
 
                         <ImageView
-                            android:layout_width="12px"
-                            android:layout_height="12px"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
                             android:background="@drawable/ic_clock" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5px"
+                            android:layout_marginLeft="5dp"
                             android:text="Time Remaining"
                             android:textColor="#3598db" />
                     </LinearLayout>
@@ -108,18 +108,18 @@
                     android:weightSum="2" >
 
                     <LinearLayout
-                        android:layout_width="0px"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical" >
 
                         <SeekBar
                             android:layout_width="fill_parent"
-                            android:layout_height="20px"
+                            android:layout_height="20dp"
                             android:id="@+id/sb_pause"
                             android:layout_gravity="center"
-                            android:layout_marginLeft="10px"
-                            android:layout_marginRight="10px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
                             android:progress="92"
                             android:progressDrawable="@drawable/progressbar_yourprogress"
                             android:thumb="@null" />
@@ -133,37 +133,37 @@
                     </LinearLayout>
 
                     <TextView
-                        android:layout_width="0px"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="25:55"
                         android:textColor="#3598db"
-                        android:textSize="35px"
+                        android:textSize="35sp"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <View
-                    android:layout_width="1px"
-                    android:layout_height="60px"
+                    android:layout_width="1dp"
+                    android:layout_height="60dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="5px"
-                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
                     android:background="#3598db" />
             </RelativeLayout>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="#3598db" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="5px"
+                android:layout_marginTop="5dp"
                 android:text="Tap to Resume"
                 android:textColor="#3598db" />
 
@@ -175,9 +175,9 @@
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="1px"
-                android:layout_marginLeft="10px"
-                android:layout_marginRight="10px"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:background="#3598db" />
         </LinearLayout>
     </ScrollView>

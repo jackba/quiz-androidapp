@@ -10,7 +10,7 @@
         android:layout_gravity="center_horizontal"
         android:text="Exam name"
         android:textColor="#2d9be6"
-        android:textSize="20px" />
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -21,29 +21,29 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_margin="10px"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_margin="10px"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_margin="10px"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
     </LinearLayout>
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1px"
-        android:layout_margin="5px"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
         android:background="#339adc" />
 
 </LinearLayout>

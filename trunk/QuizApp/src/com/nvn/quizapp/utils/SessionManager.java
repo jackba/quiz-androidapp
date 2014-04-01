@@ -10,8 +10,8 @@ import com.nvn.quizapp.Objects.Quiz;
 public class SessionManager {
 	private static SessionManager mSessionManager;
 	private static final String PREFS_FILE = "com.nvn.quizapp";
-	private Quiz curQuiz;
-	private Exam curExam;
+	private Quiz curQuiz = new Quiz();
+	private Exam curExam = new Exam();
 	
 	public static SessionManager getSessionManager() {
 		if (mSessionManager == null) {
