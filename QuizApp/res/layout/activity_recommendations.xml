@@ -148,20 +148,20 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:text="Try Again"
-        android:visibility="gone"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:visibility="gone" />
 
     <Button
+        android:id="@+id/btn_show_result"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/pressed_signup_action"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         android:text="finish"
         android:textColor="#fff"
-        android:textSize="25dp" />
+        android:textSize="25sp" />
 
 </LinearLayout>
