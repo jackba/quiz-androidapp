@@ -33,6 +33,12 @@
         </activity>
         <activity android:name="com.nvn.quizapp.PauseActivity" >
         </activity>
+        <activity android:name="com.nvn.quizapp.CompletedActivity" >
+        </activity>
+        <activity android:name="com.nvn.quizapp.AwardsActivity" >
+        </activity>
+        <activity android:name="com.nvn.quizapp.AboutActivity" >
+        </activity>
     </application>
 
 </manifest>
