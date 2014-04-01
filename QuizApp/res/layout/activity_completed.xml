@@ -82,8 +82,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="50px"
         android:layout_marginRight="50px"
-        android:gravity="center_horizontal"
         android:layout_marginTop="5px"
+        android:gravity="center_horizontal"
         android:text=" You still have time to review some of the answer. Select them below."
         android:textColor="#3598db"
         android:textSize="15px" />
@@ -115,6 +115,7 @@
         android:layout_marginLeft="20px"
         android:layout_marginRight="20px"
         android:layout_marginTop="5px"
+        android:listSelector="@android:color/transparent"
         android:scrollbars="none" >
     </ListView>
 

@@ -20,21 +20,21 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="10px"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="10px"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_margin="10px"
             android:layout_weight="1"
             android:background="@drawable/ic_superstar_notcomplete" />
