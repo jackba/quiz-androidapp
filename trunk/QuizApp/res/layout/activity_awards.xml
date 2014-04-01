@@ -26,9 +26,10 @@
         android:id="@+id/lv_award"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:divider="@null"
         android:layout_above="@+id/ll_tab"
         android:layout_below="@+id/ll_title"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
         android:scrollbars="none" />
 
     <LinearLayout
