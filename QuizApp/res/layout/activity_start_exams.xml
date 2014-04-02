@@ -122,7 +122,7 @@
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:background="@drawable/ic_clock" />
+                            android:src="@drawable/ic_clock" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -164,7 +164,7 @@
                         <ImageView
                             android:layout_width="12dp"
                             android:layout_height="12dp"
-                            android:background="@drawable/ic_question_mark" />
+                            android:src="@drawable/ic_question_mark" />
 
                         <TextView
                             android:layout_width="wrap_content"
