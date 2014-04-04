@@ -1,13 +1,16 @@
 package com.nvn.quizapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
-public class PauseActivity extends BaseActivity {
+public class PauseActivity extends BaseActivity implements OnClickListener{
 	private SeekBar mSbPause;
 	int oldProgressPause;
-
+	private Button mBtnResume;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,6 +23,7 @@ public class PauseActivity extends BaseActivity {
 	@Override
 	public void initViews() {
 		mSbPause = (SeekBar) findViewById(R.id.sb_pause);
+		mBtnResume = (Button)findViewById(R.id.btn_resume);
 	}
 
 	@Override
@@ -43,12 +47,25 @@ public class PauseActivity extends BaseActivity {
 				seekBar.setProgress(oldProgressPause);
 			}
 		});
+		mBtnResume.setOnClickListener(this);
 	}
 
 	@Override
 	public void initProperties() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_resume:
+			finish();
+			break;
+
+		default:
+			break;
+		}
 	}
 
 }
