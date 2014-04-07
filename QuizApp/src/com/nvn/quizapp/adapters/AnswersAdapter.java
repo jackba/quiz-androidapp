@@ -41,10 +41,10 @@ public class AnswersAdapter extends ArrayAdapter<Exam> {
 			holder = (ViewHolder) view.getTag();
 		}
 
-		if ((items == null) || ((position + 1) > items.size()))
-			return view;
-
-		objBean = items.get(position);
+//		if ((items == null) || ((position + 1) > items.size()))
+//			return view;
+//
+//		objBean = items.get(position);
 
 		// holder.imgExams = (ImageView) view.findViewById(R.id.imv_exams);
 		// holder.tvTitleExams = (TextView)
@@ -72,6 +72,6 @@ public class AnswersAdapter extends ArrayAdapter<Exam> {
 	
 	@Override
 	public int getCount() {
-		return 20;
+		return 60;
 	}
 }

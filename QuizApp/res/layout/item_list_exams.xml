@@ -82,6 +82,7 @@
             android:layout_height="wrap_content"
             android:text="PURCHASED"
             android:textColor="#1db019"
+            android:textSize="12sp"
             android:textStyle="bold" />
     </LinearLayout>
 
