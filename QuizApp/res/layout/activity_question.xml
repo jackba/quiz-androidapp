@@ -9,8 +9,8 @@
         android:id="@+id/rl_top"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#3598db" 
-        android:paddingTop="10dp">
+        android:background="#3598db"
+        android:paddingTop="10dp" >
 
         <LinearLayout
             android:id="@+id/ll_top1"
@@ -66,7 +66,8 @@
             android:weightSum="2" >
 
             <TextView
-                android:layout_width="0dp"				android:id="@+id/tv_timer"
+                android:id="@+id/tv_timer"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
@@ -122,18 +123,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
             <LinearLayout
+                android:id="@+id/ll_questionVideo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility="gone" >
 
-                <VideoView
-                    android:layout_width="wrap_content"
+                <com.nvn.quizapp.ScaledVideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content" />
 
                 <LinearLayout
@@ -174,7 +173,14 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <com.nvn.quizapp.AsImageView
+                android:id="@+id/imv_question"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/picture" />
+
             <TextView
+                android:id="@+id/tv_question"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -184,6 +190,7 @@
                 android:textSize="20sp" />
 
             <LinearLayout
+                android:id="@+id/ll_audio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"

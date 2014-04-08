@@ -44,8 +44,8 @@ public class AwardsFragment extends BaseFragment {
 	}
 
 	public void setAdapterToListview() {
-		objAdapter = new AwardsAdapter(mActivity,
-				R.layout.item_list_awards, arrayOfList);
+		objAdapter = new AwardsAdapter(mActivity, R.layout.item_list_awards,
+				arrayOfList);
 		mLvAward.setAdapter(objAdapter);
 	}
 }
