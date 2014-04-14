@@ -29,7 +29,6 @@ public class HomeActivity extends BaseFragmentActivity implements
 	@Override
 	public void initViews() {
 		mTvTitle = (TextView) findViewById(R.id.tv_title);
-
 		mBtnExams = (Button) findViewById(R.id.btn_exams);
 		mBtnAwards = (Button) findViewById(R.id.btn_awards);
 		mBtnAbout = (Button) findViewById(R.id.btn_about);
@@ -66,7 +65,6 @@ public class HomeActivity extends BaseFragmentActivity implements
 		while (getSupportFragmentManager().getBackStackEntryCount() > 0) {
 			getSupportFragmentManager().popBackStackImmediate();
 		}
-
 		if (fragment instanceof ExamsFragment) {
 			mTvTitle.setText(R.string.exams);
 			changeBtnState(mBtnExams);
