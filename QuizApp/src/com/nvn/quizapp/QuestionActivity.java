@@ -15,11 +15,14 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.nvn.quizapp.fragments.questiontype.AudioQuestionFragment;
+import com.nvn.quizapp.fragments.questiontype.ImageQuestionFragment;
 import com.nvn.quizapp.fragments.questiontype.MovieQuestionFragment;
+import com.nvn.quizapp.fragments.questiontype.NormalQuestionFragment;
 
 public class QuestionActivity extends BaseFragmentActivity implements
 		OnClickListener {
-	private Button mBtnPause;
+	private Button mBtnPause, mBtnNext;
 	private SeekBar mSbNumberQuestion;
 	int oldProgressNumberQuestion, oldProgressTimeAudio;
 	private CountDownTimer mCountDownTimer;
@@ -44,11 +47,13 @@ public class QuestionActivity extends BaseFragmentActivity implements
 		mBtnPause = (Button) findViewById(R.id.btn_pause);
 		mSbNumberQuestion = (SeekBar) findViewById(R.id.sb_number_question);
 		mTvTimer = (TextView) findViewById(R.id.tv_timer);
+		mBtnNext = (Button) findViewById(R.id.btn_next);
 	}
 
 	@Override
 	public void initListeners() {
 		mBtnPause.setOnClickListener(this);
+		mBtnNext.setOnClickListener(this);
 		mSbNumberQuestion
 				.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 
@@ -90,14 +95,32 @@ public class QuestionActivity extends BaseFragmentActivity implements
 			intent.putExtra("MyPackage", bundle);
 			startActivityForResult(intent, requestCode);
 			break;
+		case R.id.btn_next:
+			i++;
+			switch (i) {
+			case 1:
+				setNewPage(new NormalQuestionFragment());
+				break;
+			case 2:
+				setNewPage(new AudioQuestionFragment());
+				break;
+			case 3:
+				setNewPage(new ImageQuestionFragment());
+				break;
+			default:
+				startActivity(new Intent(QuestionActivity.this,
+						ResultActivity.class));
+				break;
+			}
+			break;
 		}
+
 	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == this.requestCode) {
 			long v1 = data.getLongExtra("data", (long) 1.0);
-			Toast.makeText(this, "Number " + v1, Toast.LENGTH_LONG).show();
 			mCountDownTimer = new MyCountTimer(v1, interval);
 			mCountDownTimer.start();
 		}
