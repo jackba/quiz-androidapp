@@ -27,7 +27,8 @@ public class QuestionActivity extends BaseFragmentActivity implements
 	private final long interval = 1 * 1000;
 	private TextView mTvTimer;
 	int i = 0;
-	private long mCurrentTime;
+	private long mCurrentTime = startTime;
+	final int requestCode = 123;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -81,30 +82,25 @@ public class QuestionActivity extends BaseFragmentActivity implements
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_pause:
-			// startActivity(new Intent(QuestionActivity.this,
-			// PauseActivity.class));
+			mCountDownTimer.cancel();
 			Intent intent = new Intent(QuestionActivity.this,
 					PauseActivity.class);
-			intent.putExtra("TIME_CURRENT", "1000");
-			startActivityForResult(intent, 2);
+			Bundle bundle = new Bundle();
+			bundle.putLong("soa", mCurrentTime);
+			intent.putExtra("MyPackage", bundle);
+			startActivityForResult(intent, requestCode);
 			break;
 		}
 	}
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-
-		// check if the request code is same as what is passed here it is 2
-		if (requestCode == 2) {
-			String time = data.getStringExtra("TIME");
-			Toast.makeText(this, "hien thi thoi gian: " + time,
-					Toast.LENGTH_LONG).show();
-			// long i = Long.parseLong(time);
-			// mCountDownTimer = new MyCountTimer(i, interval);
-			// mCountDownTimer.start();
+		if (requestCode == this.requestCode) {
+			long v1 = data.getLongExtra("data", (long) 1.0);
+			Toast.makeText(this, "Number " + v1, Toast.LENGTH_LONG).show();
+			mCountDownTimer = new MyCountTimer(v1, interval);
+			mCountDownTimer.start();
 		}
-
 	}
 
 	public class MyCountTimer extends CountDownTimer {

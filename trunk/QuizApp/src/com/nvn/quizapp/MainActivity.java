@@ -25,7 +25,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	private TextView mTvTitle;
 	private Button mBtnRegister, mBtnSignUp;
 	private ProgressDialog mPdLoading;
-	private static int SPLASH_TIME_OUT = 3000;
+	private static int SPLASH_TIME_OUT = 100;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

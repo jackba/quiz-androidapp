@@ -51,6 +51,13 @@ public class PauseActivity extends BaseActivity implements OnClickListener {
 			}
 		});
 		mBtnResume.setOnClickListener(this);
+		Intent callerIntent = getIntent();
+		Bundle packageFromCaller = callerIntent.getBundleExtra("MyPackage");
+		long a = packageFromCaller.getLong("soa");
+
+//		Toast.makeText(this, "Number " + a, Toast.LENGTH_LONG).show();
+		callerIntent.putExtra("data", a);
+		setResult(123, callerIntent);
 	}
 
 	@Override
@@ -63,12 +70,6 @@ public class PauseActivity extends BaseActivity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_resume:
-			Intent intent = new Intent();
-			String s = intent.getStringExtra("TIME_CURRENT");
-			Toast.makeText(this, "hien thi thoi gian chuyen qua: " + s,
-					Toast.LENGTH_LONG).show();
-			intent.putExtra("TIME", s);
-			setResult(2, intent);
 			finish();// finishing activity
 			break;
 
