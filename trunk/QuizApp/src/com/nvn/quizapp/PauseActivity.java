@@ -54,8 +54,6 @@ public class PauseActivity extends BaseActivity implements OnClickListener {
 		Intent callerIntent = getIntent();
 		Bundle packageFromCaller = callerIntent.getBundleExtra("MyPackage");
 		long a = packageFromCaller.getLong("soa");
-
-//		Toast.makeText(this, "Number " + a, Toast.LENGTH_LONG).show();
 		callerIntent.putExtra("data", a);
 		setResult(123, callerIntent);
 	}
