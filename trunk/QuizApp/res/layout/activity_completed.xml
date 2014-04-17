@@ -134,7 +134,7 @@
             android:layout_marginTop="10dp"
             android:background="#3d97d5" />
 
-        <com.nvn.quizapp.ExpandableHeightListView
+        <com.nvn.quizapp.element.ExpandableHeightListView
             android:id="@+id/lv_answer"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
@@ -143,7 +143,7 @@
             android:layout_marginTop="5dp"
             android:listSelector="@android:color/transparent"
             android:scrollbars="none" >
-        </com.nvn.quizapp.ExpandableHeightListView>
+        </com.nvn.quizapp.element.ExpandableHeightListView>
     </LinearLayout>
 
 </ScrollView>

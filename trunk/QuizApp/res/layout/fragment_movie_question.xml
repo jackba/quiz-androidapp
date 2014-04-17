@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <com.nvn.quizapp.ScaledVideoView
+            <com.nvn.quizapp.element.ScaledVideoView
                 android:id="@+id/videoView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
