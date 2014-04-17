@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:paddingBottom="@dimen/fragment_padding_bottom" >
 
-        <com.nvn.quizapp.AsImageView
+        <com.nvn.quizapp.element.AsImageView
             android:id="@+id/imv_question"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

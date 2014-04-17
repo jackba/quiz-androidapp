@@ -1,4 +1,4 @@
-package com.nvn.quizapp;
+package com.nvn.quizapp.element;
 
 import android.content.Context;
 import android.util.AttributeSet;

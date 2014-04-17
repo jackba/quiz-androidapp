@@ -26,8 +26,7 @@ public class QuestionActivity extends BaseFragmentActivity implements
 	private SeekBar mSbNumberQuestion;
 	int oldProgressNumberQuestion, oldProgressTimeAudio;
 	private CountDownTimer mCountDownTimer;
-	private final long startTime = 30 * 1000;
-	private final long interval = 1 * 1000;
+	private final long startTime = 30 * 1000, interval = 1 * 1000;;
 	private TextView mTvTimer;
 	int i = 0;
 	private long mCurrentTime = startTime;
