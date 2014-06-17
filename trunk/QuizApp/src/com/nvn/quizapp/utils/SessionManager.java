@@ -1,5 +1,7 @@
 package com.nvn.quizapp.utils;
 
+import java.util.ArrayList;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -10,7 +12,7 @@ import com.nvn.quizapp.Objects.Quiz;
 public class SessionManager {
 	private static SessionManager mSessionManager;
 	private static final String PREFS_FILE = "com.nvn.quizapp";
-	private Quiz curQuiz = new Quiz();
+	private ArrayList<Exam> exams = new ArrayList<Exam>();
 	private Exam curExam = new Exam();
 	
 	public static SessionManager getSessionManager() {
@@ -32,18 +34,14 @@ public class SessionManager {
 		editor.commit();
 	}
 
-	/**
-	 * @return the curQuiz
-	 */
-	public Quiz getCurQuiz() {
-		return curQuiz;
+	
+
+	public ArrayList<Exam> getExams() {
+		return exams;
 	}
 
-	/**
-	 * @param curQuiz the curQuiz to set
-	 */
-	public void setCurQuiz(Quiz curQuiz) {
-		this.curQuiz = curQuiz;
+	public void setExams(ArrayList<Exam> exams) {
+		this.exams = exams;
 	}
 
 	/**

@@ -15,7 +15,7 @@ public abstract class BaseWSControl extends AsyncTask<Void, Object, Object> {
 
 	public enum WebServiceFlag {
 
-		GET_QUIZ_DATA
+		GET_EXAM_DATA, GET_EXAM_DETAIL
 
 	}
 

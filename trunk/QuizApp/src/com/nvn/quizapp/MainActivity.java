@@ -1,6 +1,10 @@
 package com.nvn.quizapp;
 
+import java.util.ArrayList;
+
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,12 +14,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nvn.quizapp.Objects.Exam;
 import com.nvn.quizapp.Objects.Quiz;
 import com.nvn.quizapp.utils.SessionManager;
 import com.nvn.quizapp.utils.Statics;
 import com.nvn.quizapp.ws.BaseWSControl;
 import com.nvn.quizapp.ws.BaseWSControl.WebServiceFlag;
-import com.nvn.quizapp.ws.GetQuizDataWSControl;
+import com.nvn.quizapp.ws.GetExamDataWSControl;
 import com.nvn.quizapp.ws.WebServiceCommunicatorListener;
 
 public class MainActivity extends BaseActivity implements OnClickListener,
@@ -25,7 +30,8 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	private TextView mTvTitle;
 	private Button mBtnRegister, mBtnSignUp;
 	private ProgressDialog mPdLoading;
-	private static int SPLASH_TIME_OUT = 100;
+	private boolean dataOK, splashOK;
+	private static int SPLASH_TIME_OUT = 3000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +42,6 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		initListeners();
 		initProperties();
 
-		// getData();
 	}
 
 	@Override
@@ -57,10 +62,16 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	@Override
 	public void initProperties() {
 		mImvLogo.setBackgroundResource(R.drawable.ic_logo);
-		mTvTitle.setText("VCA EXAMEN TEST");
+		mTvTitle.setText(Statics.APP_NAME);
 		mPdLoading = new ProgressDialog(this);
 		mPdLoading.setCancelable(false);
 		mPdLoading.setMessage("Loading...");
+		
+		dataOK = false;
+		splashOK = false;
+		
+		getData();
+		
 		new Handler().postDelayed(new Runnable() {
 
 			/*
@@ -72,15 +83,21 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 			public void run() {
 				// This method will be executed once the timer is over
 				// Start your app main activity
-				Intent i = new Intent(MainActivity.this, HomeActivity.class);
-				startActivity(i);
-
-				// close this activity
-				finish();
+				splashOK = true;
+				
+				redirectToHome();
 			}
 		}, SPLASH_TIME_OUT);
 	}
 
+	private void redirectToHome(){
+		if(splashOK && dataOK){
+			Intent i = new Intent(MainActivity.this, HomeActivity.class);
+			startActivity(i);
+			finish();
+		}
+	}
+	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -100,7 +117,7 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 	}
 
 	private void getData() {
-		new GetQuizDataWSControl(this, this, Statics.QUIZ_ID).execute();
+		new GetExamDataWSControl(this, this).execute();
 	}
 
 	@Override
@@ -115,17 +132,41 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 		Statics.showToast(this, error);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void onConnectionDone(BaseWSControl wsControl, WebServiceFlag flag,
 			Object result) {
 		mPdLoading.dismiss();
-		if (flag == WebServiceFlag.GET_QUIZ_DATA) {
-			SessionManager.getSessionManager().setCurQuiz((Quiz) result);
+		if (flag == WebServiceFlag.GET_EXAM_DATA) {
+			dataOK = true;
+			SessionManager.getSessionManager().setExams((ArrayList<Exam>) result);
+			
+			redirectToHome();
 		}
 	}
 
 	@Override
 	public void onUpdateData(BaseWSControl wsControl, WebServiceFlag flag,
 			Object data) {
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if(!Statics.isNetworkConnected(this)){
+			new AlertDialog.Builder(MainActivity.this)
+			.setTitle("Notice")
+			.setMessage("Oops! No internet connection.")
+			.setPositiveButton("Ok",
+					new DialogInterface.OnClickListener() {
+
+						@Override
+						public void onClick(
+								DialogInterface dialog,
+								int which) {
+							finish();
+						}
+					}).show();
+		}
 	}
 }
