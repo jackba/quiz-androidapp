@@ -44,8 +44,7 @@ public class CompletedActivity extends BaseActivity implements OnClickListener {
 
 	@Override
 	public void initProperties() {
-		arrayOfList = SessionManager.getSessionManager().getCurQuiz()
-				.getExams();
+		arrayOfList = SessionManager.getSessionManager().getExams();
 		setAdapterToListview();
 
 	}

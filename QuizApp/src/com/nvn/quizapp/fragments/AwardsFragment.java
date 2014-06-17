@@ -38,8 +38,7 @@ public class AwardsFragment extends BaseFragment {
 
 	@Override
 	public void initProperties() {
-		arrayOfList = SessionManager.getSessionManager().getCurQuiz()
-				.getExams();
+		arrayOfList = SessionManager.getSessionManager().getExams();
 		setAdapterToListview();
 	}
 

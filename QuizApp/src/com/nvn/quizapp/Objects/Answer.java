@@ -1,7 +1,8 @@
 package com.nvn.quizapp.Objects;
 
 public class Answer {
-	private String text;
+	private int ID;
+	private String text, createdDate;
 	private boolean isCorrect;
 	private boolean isActive;
 	
@@ -9,11 +10,17 @@ public class Answer {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Answer(String text, boolean isCorrect, boolean isActive) {
-		this.text = text;
-		this.isCorrect = isCorrect;
-		this.isActive = isActive;
+	
+	public int getID() {
+		return ID;
 	}
+
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+
+
 	/**
 	 * @return the text
 	 */
@@ -26,6 +33,18 @@ public class Answer {
 	public void setText(String text) {
 		this.text = text;
 	}
+	
+	
+	public String getCreatedDate() {
+		return createdDate;
+	}
+
+
+	public void setCreatedDate(String createdDate) {
+		this.createdDate = createdDate;
+	}
+
+
 	/**
 	 * @return the isCorrect
 	 */

@@ -4,17 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:paddingBottom="15dp"
-    android:paddingTop="15dp"
-    android:weightSum="3" >
+    android:paddingTop="15dp">
 
     <com.nvn.quizapp.element.ScaledImageView
         android:id="@+id/imv_exams"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_weight="1" />
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -47,12 +46,34 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="100dp"
+        android:id="@+id/layout_preview"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginRight="7dp"
-        android:layout_weight="1"
         android:background="@drawable/pressed_preview_action"
+        android:gravity="center"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="PREVIEW"
+            android:textColor="#ff0000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/pressed_purchased_action"
         android:gravity="center"
         android:paddingBottom="4dp"
         android:paddingTop="4dp"
@@ -61,25 +82,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PREVIEW"
-            android:textColor="#ff0000"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginRight="7dp"
-        android:layout_weight="1"
-        android:background="@drawable/pressed_purchased_action"
-        android:gravity="center"
-        android:paddingBottom="4dp"
-        android:paddingTop="4dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:text="PURCHASED"
             android:textColor="#1db019"
             android:textSize="12sp"

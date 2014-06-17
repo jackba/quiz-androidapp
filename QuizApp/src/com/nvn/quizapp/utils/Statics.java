@@ -10,8 +10,16 @@ import android.net.NetworkInfo;
 import android.widget.Toast;
 
 public class Statics {
-	public static String QUIZ_ID = "1234";
-	public static String WS_LINK = "http://effective-task-522.appspot.com/exam_app/api/get_data/";
+	// App's configuration
+	public static String APP_NAME = "VCA EXAMEN";
+	//
+	//
+	
+	
+	public static String QUIZ_ID = "1";
+	public static String HOST = "http://effective-task-522.appspot.com/";
+	public static String WS_EXAMS = HOST + "api/exam/?app_id="+QUIZ_ID;
+	public static String WS_EXAM_DETAIL = HOST + "api/subject/?exam_id=";
 
 	public static void showToast(Context ctx, String txt) {
 		Toast.makeText(ctx, txt, Toast.LENGTH_SHORT).show();
@@ -88,5 +96,21 @@ public class Statics {
 			return json.getJSONArray(key);
 		}
 		return new JSONArray();
+	}
+	
+	public static String time2String(int time){
+		String str = "";
+		int hour = time/60;
+		int min = time%60;
+		
+		if(hour > 0){
+			str += (hour > 1) ? (hour + " hours ") : (hour + " hour ");
+		}
+		
+		if(min > 0){
+			str += (min > 1) ? (min + " minutes ") : (min + " minute ");
+		}
+		
+		return str;
 	}
 }

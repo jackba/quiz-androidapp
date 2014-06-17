@@ -41,8 +41,7 @@ public class ExamsFragment extends BaseFragment implements OnItemClickListener{
 
 	@Override
 	public void initProperties() {
-		arrayOfList = SessionManager.getSessionManager().getCurQuiz()
-				.getExams();
+		arrayOfList = SessionManager.getSessionManager().getExams();
 		setAdapterToListview();
 	}
 
